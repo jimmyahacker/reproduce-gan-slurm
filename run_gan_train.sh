@@ -20,4 +20,4 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-sbatch --export=YAML_FILE=$yaml_file,PROFILE=$profile $sbatch_file
+sbatch --export=YAML_FILE="$yaml_file",PROFILE="$profile" "$sbatch_file"

@@ -8,7 +8,7 @@
 #SBATCH --output=slurm_%j.out
 
 # load gan env profile
-. $PROFILE
+. "$PROFILE"
 
 # train
-THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python2 -m pylearn2.scripts.train $YAML_FILE 
+THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python2 -m pylearn2.scripts.train "$YAML_FILE"
