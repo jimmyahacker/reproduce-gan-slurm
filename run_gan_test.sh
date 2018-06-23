@@ -20,4 +20,4 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-sbatch --export=MODEL_PATH=$model_path,PROFILE=$profile $sbatch_file
+sbatch --export=MODEL_PATH="$model_path",PROFILE="$profile" "$sbatch_file"
